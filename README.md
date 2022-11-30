@@ -47,12 +47,13 @@ module.exports = defineConfig({
 ### 3. pacakage.json에 "depoly", "predeploy" 추가
 ```
 "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build"
-  },
+  "serve": "vue-cli-service serve",
+  "build": "vue-cli-service build",
+  "lint": "vue-cli-service lint",
+  "deploy": "gh-pages -d dist",
+  "predeploy": "npm run build"
+},
+"homepage": "https://devinhyeok.github.io/vue3-learn/"
 ```
 
 ### 4. 터미널을 통해 빌드
