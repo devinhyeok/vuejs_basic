@@ -66,7 +66,7 @@ export default defineConfig({
   "deploy": "gh-pages -d dist", // 추가
   "predeploy": "npm run build" // 추가
 },
-"homepage": "https://devinhyeok.github.io/vuejs_basic/" //
+"homepage": "https://devinhyeok.github.io/vuejs_basic/" // 추가
 ```
 
 ### 4. 터미널을 통해 빌드
