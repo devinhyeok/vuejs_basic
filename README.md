@@ -53,7 +53,7 @@ module.exports = defineConfig({
   "deploy": "gh-pages -d dist",
   "predeploy": "npm run build"
 },
-"homepage": "https://devinhyeok.github.io/vue3-learn/"
+"homepage": "https://devinhyeok.github.io/vuejs_basic/"
 ```
 
 ### 4. 터미널을 통해 빌드
