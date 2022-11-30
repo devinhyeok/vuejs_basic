@@ -36,11 +36,24 @@ npm i gh-pages
 ```
 
 ### 2. vue.config.js 수정
+#### npm으로 프로젝트 생성시
 ```
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/vuejs_basic' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vuejs_basic' : '/', // 추가
+})
+```
+#### vite로 프로젝트 생성시
+```
+export default defineConfig({
+  base: '/vue3-learn/', // 추가
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  }
 })
 ```
 
@@ -50,10 +63,10 @@ module.exports = defineConfig({
   "serve": "vue-cli-service serve",
   "build": "vue-cli-service build",
   "lint": "vue-cli-service lint",
-  "deploy": "gh-pages -d dist",
-  "predeploy": "npm run build"
+  "deploy": "gh-pages -d dist", // 추가
+  "predeploy": "npm run build" // 추가
 },
-"homepage": "https://devinhyeok.github.io/vuejs_basic/"
+"homepage": "https://devinhyeok.github.io/vuejs_basic/" //
 ```
 
 ### 4. 터미널을 통해 빌드
